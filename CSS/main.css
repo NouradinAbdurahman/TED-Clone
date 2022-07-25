@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --main-red-color: #D91E18;
+    --paragraph-color: #555555;
+    --title-or-description-color: #121212;
+    --author-or-name-color: #757575;
+    --nav-anchor-list-color: #494949;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: white;
+    color: black;
+    line-height: 1;
+}
+/* start global */
+.container {  /* Put 'container class' after every section you create before creating other elements insode the section*/
+    width: 90%;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+/* end global */
+
+/* 
+    // NOTE:
+            
+    - Please use before every begining of section comment like:
+        < start "name of the section">
+
+        < end "name of the section">
+
+    *feel free to remove this comment. 
+*/
