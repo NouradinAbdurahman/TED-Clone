@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
@@ -20,7 +22,7 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial;
 }
 /* start global */
-.container {  /* Put 'container class' after every section you create before creating other elements insode the section*/
+.container { 
     width: 90%;
     margin: auto;
 }
@@ -29,6 +31,9 @@ a {
 }
 ul {
     list-style: none;
+}
+img {
+    max-width: 100%;
 }
 svg {
     display: block;
@@ -39,17 +44,390 @@ hr {
     color: gray;
 }
 /* end global */
+/* start Header */
+header {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0px 20px;
+    background-color: #ffff;
+}
+.open-menu {
+    display: none;
+}
+.sing-in {
+    display: none;
+}
+.close-menu {
+    display: none;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.logo {
+    width: 100%;
+}
+.logo .logo-desc {
+    display: inline-block;
+    color: #454545;
+    margin-left: 10px;
+}
+.logo-image {
+    width: 100%;
+}
+.logo img {
+    vertical-align: bottom;
+    min-width: 10%;
+    max-width: 10%;
+    padding-top: 10px;
+}
+nav .unOrderList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+}
+nav .unOrderList .item {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.item-dropDown {
+    display: none;
+    position: absolute;
+    content: " ";
+    left: -100px;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    z-index: 99;
+    text-align: start;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.127);
+}
+.dropDown-content {
+    padding: 20px;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+.dropDown-link {
+    font-size: 15px;
+    padding-bottom: 10px;
+    color: black;
+}
+.dropDown-desc {
+    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+}
+.item-dropDown li:hover {
+    background-color: #ebebeb;
+}
+.item-dropDown li:first-child:hover {
+    border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -ms-border-radius: 10px 10px 0px 0px;
+    -o-border-radius: 10px 10px 0px 0px;
+}
+.item-dropDown li:last-child:hover {
+    border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -ms-border-radius: 0px 0px 10px 10px;
+    -o-border-radius: 0px 0px 10px 10px;
+}
 
-/* 
-    // NOTE:
-            
-    - Please use before every begining of section comment like:
-        < start "name of the section">
+nav .unOrderList .item:hover {
+    background-color: #ebebeb;
+}
+nav .unOrderList .item:hover .item-dropDown {
+    display: block;
+}
+nav .unOrderList .item .link {
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 20px;
+    display: block;
+    font-weight: 600;
+    color: var(--nav-anchor-list-color);
+}
+.membership {
+    padding: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--main-red-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+    -webkit-transition: box-shadow 0.3s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out;
+    -ms-transition: box-shadow 0.3s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out;
+}
+.membership-link {
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
 
-        < end "name of the section">
+}
+.membership:hover {
+    box-shadow: inset 0px 0px 10px 50px rgba(0, 0, 0, 0.127);
+}
+.open-search {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 15px;
+    font-size: 2rem;
+}
+.open-search .fa-magnifying-glass {
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.open-search .fa-magnifying-glass:hover {
+    opacity: .7;
+}
+nav .unOrderList .item.search-item:hover {
+    background-color: unset;
+}
+/* .search-form {
+    display: none;
+} */
+.search-container.active {
+    display: block;
+}
+.search-container {
+    display: none;
+}
+.search-form {
+    display: none;
+    position: absolute;
+    content: " ";
+    top: -8px;
+    right: 0;
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    background-color: white;
+    z-index: 99;
+}
+.search {
+    width: 400px;
+    padding: 17px;
+    outline: none;
+    border: none;
+    background-color: #ebebeb;
+    vertical-align: top;
+    font-size: 15px;
+}
+.close-search {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 15px;
+    padding: 8px;
+    font-size: 2rem;
+}
 
-    *feel free to remove this comment. 
-*/
+@media screen and (max-width: 1024px) {
+    header {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        padding: 10px;
+    }
+    .close-menu {
+        display: none;
+    }
+    .close-menu.active {
+        display: block;
+    }
+    .close-menu.active {
+        display: block;
+    }
+    .open-menu {
+        display: block;
+        font-size: 2rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        padding-left: 20px;
+    }
+    .open-menu.active {
+        display: none;
+    }
+    .sing-in {
+        display: block;
+        text-align: end;
+        padding: 10px 20px 0 20px ;
+        
+    }
+    .sing-in .link {
+        text-transform: uppercase;
+        font-size: 13px;
+        display: block;
+        font-weight: 600;
+        color: var(--nav-anchor-list-color);
+    }
+    .logo {
+        text-align: center;
+    }
+    .logo img {
+        max-width: 30%;
+        padding: 1px;
+    }
+    .logo .logo-desc {
+        display: none;
+    }
+    nav {
+        display: none;
+        position: fixed;
+        content: " ";
+        top: 7%;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        z-index: 99;
+        overflow-y: scroll;
+        padding-bottom: 100px;
+    }
+    nav.active {
+        display: block;
+    }
+    .nav-content {
+        width: 90%;
+        margin: auto;
+        height: auto;
+        /* background-color: #121212; */
+    }
+    nav .unOrderList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: start;
+        padding: 0px;
+    }
+    nav .unOrderList .item {
+        position: relative;
+        display: block;
+    }
+    .item-dropDown {
+        display: block;
+        position: unset;
+        width: 45vw;
+        /* width: 400px; */
+        height: auto;
+        border-bottom: 1px solid #ececec;
+        border-radius: unset;
+        -webkit-border-radius: unset;
+        -moz-border-radius: unset;
+        -ms-border-radius: unset;
+        -o-border-radius: unset;
+        box-shadow: unset;
+        padding-bottom: 10px;
+    }
+    .item-dropDown li:hover {
+        background-color: unset;
+    }
+    .dropDown-link:hover {
+        text-decoration: underline;
+    }
+    .dropDown-content {
+        padding: 10px 20px;
+    }
+    .dropDown-link {
+        font-size: 13px;
+        padding: 0;
+    }
+    .dropDown-desc {
+        line-height: 0;
+        padding: 0;
+        display: none;
+    }
+    nav .unOrderList .item:hover {
+        background-color: unset;
+    }
+    .open-search {
+        display: none;
+    }
+    .unOrderList .item .link.sing-in-desktop {
+        display: none;
+    }
+    .membership {
+        width: 45vw;
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .logo img {
+        max-width: 50%;
+    }
+    nav {
+        top: 8%;
+        width: 100%;
+        /* padding-bottom: 200px; */
+    }
+    .item-dropDown {
+        display: block;
+        position: unset;
+        width: 90vw;
+        height: auto;
+        border-bottom: 1px solid #ececec;
+        border-radius: unset;
+        -webkit-border-radius: unset;
+        -moz-border-radius: unset;
+        -ms-border-radius: unset;
+        -o-border-radius: unset;
+        box-shadow: unset;
+    }
+    .membership {
+        width: 90vw;
+        padding: 15px;
+        margin-top: 50px;
+    }
+    .membership-link {
+        font-size: 13px;
+        color: white;
+        text-transform: uppercase;
+
+    }
+}
+@media screen and (max-width: 600px) {
+    nav {
+        top: 7%;
+    }
+}
+
+/* end Header */
 
 /* start banner */
 .banner {
