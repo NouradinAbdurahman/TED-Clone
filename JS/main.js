@@ -1,5 +1,5 @@
 console.log("TED Clone!");
-// start open serch
+// start open search
 const openSearch = document.querySelector(".open-search");
 const closeSearch = document.querySelector(".close-search");
 const searchContainer = document.querySelector(".search-container");
@@ -10,7 +10,7 @@ openSearch.addEventListener("click", () => {
 closeSearch.addEventListener("click", () => {
   searchContainer.classList.remove("active");
 });
-// end open serch
+// end open search
 
 // start opne menu
 const openMenu = document.querySelector(".open-menu");
