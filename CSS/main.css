@@ -17,6 +17,7 @@ body {
     background: white;
     color: black;
     line-height: 1;
+    font-family: "Helvetica Neue",Helvetica,Arial;
 }
 /* start global */
 .container {  /* Put 'container class' after every section you create before creating other elements insode the section*/
@@ -28,6 +29,14 @@ a {
 }
 ul {
     list-style: none;
+}
+svg {
+    display: block;
+    vertical-align: middle;
+}
+hr {
+    margin-top: 50px;
+    color: gray;
 }
 /* end global */
 
@@ -41,3 +50,287 @@ ul {
 
     *feel free to remove this comment. 
 */
+
+/* start banner */
+.banner {
+    display: flex;background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+}
+.banner .left {
+    width: 70%;
+    margin-top: 48px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 0;
+}
+.banner .left .text h4 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.banner .left .text p {
+    font-size: 20px;
+    line-height: 30px;
+    word-spacing: 3px;
+}
+.banner .left .button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: #D91E18;
+    display: flex;
+    width: 144px;
+    height: 48px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.banner .left .button:hover {
+    opacity: 0.82;
+}
+.banner .left .button > p {
+    margin-right: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.banner .left .button > svg {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.banner .right {
+    width: 21%;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 0;
+}
+.banner .right > img {
+    width: 95%;
+}
+
+@media screen and (max-width: 1050px) {
+    
+    .banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner .left {
+        margin-top: 0;
+        width: 92%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+    .banner .right {
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 37%;
+    }
+}  
+/* end banner */
+
+/* start Featured */
+.featured {
+    /* margin: 16px 54px; */
+    width: 93%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+.featured .header {
+    /* font-size: 22px; */
+    font-size: 1.375rem;
+    line-height: 1.35;
+    font-weight: bold;
+    color: #212121;
+}
+
+.featured .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured .content .left {
+    width: 49%;
+}
+
+.featured .content .left .text {
+    margin-top: 45px;
+}
+
+.featured .content .left .text > h1 {
+    font-weight: 700;
+    line-height: 35px;
+    /* word-spacing: 3px; */
+}
+
+.featured .content .left .text .detail {
+    color: rgba(85,85,85);
+    line-height: 1.5;
+    margin: 16px 0 25px;
+}
+
+.featured .content .left .button {
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    width: 120px;
+    height: 48px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.featured .content .left .button:hover {
+    opacity: 0.82;
+}
+.featured .content .left .button > p {
+    margin-right: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.featured .content .right {
+    width: 49%;
+}
+.featured .content .right > img {
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .featured .content {
+        flex-direction: column-reverse;
+    }
+    .featured .content .left {
+        width: 98%;
+    }
+    .featured .content .right {
+        width: 98%;
+    }
+    .featured .content .left .text {
+        margin-top: 20px;
+    }
+    .featured .content .left .text > h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}  
+/* end Featured */
+
+/* start Featured Slides && Newest Talk */
+.featuredSlides {
+    position: relative;
+    max-width: 95%;
+    margin:  auto;
+}
+.item-image {
+    width: 100%;
+}
+.item-image img {
+    width: 100%;
+    border-radius: 4px 4px 0 0 ;
+    -webkit-border-radius: 4px 4px 0 0 ;
+    -moz-border-radius: 4px 4px 0 0 ;
+    -ms-border-radius: 4px 4px 0 0 ;
+    -o-border-radius: 4px 4px 0 0 ;
+}
+.featuredSlides .title, .newest-talks-container .title {
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: bolder;
+    padding: 10px 0;
+    color: #777;
+    margin: 10px 0 5px;
+}
+.newest-talks-container .date {
+    font-size: 12px;
+    padding: 10px 0;
+    color: #777;
+    margin: 10px 0 5px;
+}
+.featuredSlides .desc {
+    text-transform: capitalize;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+.newest-talks-container .desc {
+    text-transform: capitalize;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: white;
+    opacity: .5;
+    transition: opacity .3s ;
+    -webkit-transition: opacity .3s ;
+    -moz-transition: opacity .3s ;
+    -ms-transition: opacity .3s ;
+    -o-transition: opacity .3s ;
+}
+.featuredSlides .swiper, .newest-talks-container .swiper {
+    padding: 80px 0;
+}
+.newest-talks-container .swiper {
+    padding: 30px;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: white;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: #555;
+}
+.newest-talks-container {
+    padding: 50px 0;
+}
+.newest-talks-container .top {
+    display: flex;
+    align-items: center;justify-content: space-between;
+}
+.newest-talks-container .top .right {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.newest-talks-container .top .right > svg {
+    margin-left: 4px;
+    height: 16px;
+}
+.newest-talks-container .top .right > p {
+    font-weight: bold;
+    font-size: 14px;
+}
+.newest-talks-container h2 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.swiper-slide {
+    cursor: pointer !important;
+}
+@media screen and (max-width: 600px) {
+    .desc {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 18px;
+    }
+    .desc {
+        font-size: 11px;
+        line-height: 1;
+    }
+}
+/* end Featured Slides && Newest Talk */
