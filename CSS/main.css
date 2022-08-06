@@ -17,6 +17,11 @@ body {
     background: white;
     color: black;
     line-height: 1;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+svg {
+    display: block;
+    vertical-align: middle;
 }
 /* start global */
 .container {  /* Put 'container class' after every section you create before creating other elements insode the section*/
@@ -41,3 +46,86 @@ ul {
 
     *feel free to remove this comment. 
 */
+
+/* start banner */
+.banner {
+    display: flex;background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+}
+.banner .left {
+    width: 70%;
+    margin-top: 48px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 0;
+}
+.banner .left .text h4 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.banner .left .text p {
+    font-size: 20px;
+    line-height: 30px;
+    word-spacing: 3px;
+}
+.banner .left .button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: #D91E18;
+    display: flex;
+    width: 144px;
+    height: 48px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.banner .left .button:hover {
+    opacity: 0.82;
+}
+.banner .left .button > p {
+    margin-right: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.banner .left .button > svg {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.banner .right {
+    width: 21%;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 0;
+}
+.banner .right > img {
+    width: 95%;
+}
+
+@media screen and (max-width: 1050px) {
+    
+    .banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner .left {
+        margin-top: 0;
+        width: 92%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+    .banner .right {
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 37%;
+    }
+}  
+/* end banner */
