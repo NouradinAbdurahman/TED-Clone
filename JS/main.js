@@ -1,17 +1,34 @@
 console.log("TED Clone!");
+// start open search
+const openSearch = document.querySelector(".open-search");
+const closeSearch = document.querySelector(".close-search");
+const searchContainer = document.querySelector(".search-container");
 
-/*
-    // NOTE:
-            
-    - Please use before every begining of section comment like:
-        < start "name of the section">
+openSearch.addEventListener("click", () => {
+  searchContainer.classList.add("active");
+});
+closeSearch.addEventListener("click", () => {
+  searchContainer.classList.remove("active");
+});
+// end open search
 
-        < end "name of the section">
+// start opne menu
+const openMenu = document.querySelector(".open-menu");
+const closeMenu = document.querySelector(".close-menu");
+const nav = document.querySelector(".nav");
 
-    *feel free to remove this comment. 
-*/
+openMenu.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  closeMenu.classList.add("active");
+  openMenu.classList.add("active");
+});
+closeMenu.addEventListener("click", () => {
+  nav.classList.remove("active");
+  openMenu.classList.remove("active");
+  closeMenu.classList.remove("active");
+});
+// end opne menu
 
-//
 // start Swiper
 //
 const swiper = new Swiper(".mySwiper", {
