@@ -548,7 +548,7 @@ nav .unOrderList .item.search-item:hover {
     background-color: #000;
     color: #fff;
     display: flex;
-    width: 120px;
+    width: 121px;
     height: 48px;
     border-radius: 4px;
     display: flex;
@@ -609,7 +609,7 @@ nav .unOrderList .item.search-item:hover {
     -ms-border-radius: 4px 4px 0 0 ;
     -o-border-radius: 4px 4px 0 0 ;
 }
-.featuredSlides .title, .newest-talks-container .title {
+.featuredSlides .title, .newest-talks-container .title, .explore-playlists .title {
     text-transform: capitalize;
     font-size: 12px;
     font-weight: bolder;
@@ -629,7 +629,7 @@ nav .unOrderList .item.search-item:hover {
     color: black;
     font-weight: bold;
 }
-.newest-talks-container .desc {
+.newest-talks-container .desc, .explore-playlists .desc {
     text-transform: capitalize;
     font-size: 15px;
     color: black;
@@ -646,10 +646,11 @@ nav .unOrderList .item.search-item:hover {
     -o-transition: opacity .3s ;
 }
 .featuredSlides .swiper, .newest-talks-container .swiper {
-    padding: 80px 0;
+    padding: 30px 0;
 }
-.newest-talks-container .swiper {
-    padding: 30px;
+.newest-talks-container .swiper, 
+.explore-playlists .swiper {
+    padding: 25px 0 45px;
 }
 .swiper-button-next:hover, .swiper-button-prev:hover {
     color: white;
@@ -659,7 +660,7 @@ nav .unOrderList .item.search-item:hover {
     background-color: #555;
 }
 .newest-talks-container {
-    padding: 50px 0;
+    padding: 30px 0;
 }
 .newest-talks-container .top {
     display: flex;
@@ -790,4 +791,46 @@ nav .unOrderList .item.search-item:hover {
     color: #fff !important;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 480px) {
+    .intrests .containter .down {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .intrests .containter .down > button {
+        margin-bottom: 15px;
+    }
+}
 /* end Intrests */
+
+/* start Explore-playlists */
+.explore-playlists {
+    width: 70%;
+}
+
+.explore-playlists .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 10px;
+}
+.explore-playlists .top .right {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.explore-playlists .top .right > svg {
+    margin-left: 4px;
+    height: 16px;
+}
+.explore-playlists .top .right > p {
+    font-weight: bold;
+    font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+    .explore-playlists {
+        width: 100%;
+    }
+}
+/* end Explore-playlists */
