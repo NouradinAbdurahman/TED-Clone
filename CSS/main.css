@@ -701,3 +701,93 @@ nav .unOrderList .item.search-item:hover {
     }
 }
 /* end Featured Slides && Newest Talk */
+
+/* start Intrests */
+.intrests {
+    background-color: #000;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("../images/Background Images/interests.jpeg");
+    background-position: center center;
+    background-size: cover;
+    padding: 64px 35px 40px;
+    color: white;
+}
+.intrests .containter {
+    width: 95%;
+    margin: auto;
+}
+.intrests .containter .title {
+    font-size: 20px;
+
+}
+.intrests .containter .subtitle {
+    font-size: 14px;
+    margin: 12px 0 20px;
+}
+.intrests .containter .tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+}
+.intrests .containter .tags .tag {
+    padding: 4px;
+    background-color: #12121299;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    border:1px solid #12121299;
+    transition: all .7s ease-in-out;
+}
+.intrests .containter .tags .tag:hover {
+    border:1px solid #fff;
+}
+.intrests .containter .tags .tag {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    padding: 10px 14px;
+}
+
+.intrests .containter .down {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.intrests .containter .down > button {
+    display: flex;
+    
+    padding: 12px 20px;
+    display: flex;
+    width: 181.25px;
+    height: 48px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(171, 171, 171);
+    border: 0;
+    margin-right: 20px;
+}
+
+.intrests .containter .down > button > p {
+    margin-right: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(94, 94, 94);
+}
+
+.intrests .containter .down > button > svg {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.intrests .containter .down > p {
+    font-size: 14px;
+}
+
+.intrests .containter .down > p a {
+    color: #fff !important;
+    text-decoration: underline;
+}
+/* end Intrests */
