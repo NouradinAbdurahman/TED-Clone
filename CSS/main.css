@@ -22,7 +22,7 @@ body {
 }
 /* start global */
 .container { 
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 a {
@@ -701,3 +701,159 @@ nav .unOrderList .item.search-item:hover {
     }
 }
 /* end Featured Slides && Newest Talk */
+
+/* start footer */
+footer {
+    border-top: 3px solid var(--main-red-color);
+}
+.footer-logo {
+    padding: 100px 0 30px 0;
+    border-bottom: 1px solid black;
+}
+.footer-logo img {
+    width: 5%;
+}
+.footer-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.footer-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(400px, 1fr));
+}
+.footer-card-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+
+}
+.footer-card-items-content h5 {
+    padding-bottom: 30px;
+}
+.footer-card-items-content ul li {
+    padding: 15px 0;
+}
+.footer-card-items-content ul li a {
+    color: var(--paragraph-color);
+    font-size: 14px;
+}
+.p-r {
+    padding-right: 50px;
+}
+.footer-card-items-content ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-card-items.ted-member {
+    border-left: 1px solid rgba(0, 0, 0, 0.178);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.p-l {
+    padding-left: 50px;
+}
+.ted-member-card {
+    padding-bottom: 50px;
+}
+.ted-member-card a, .ted-recommendations-card a {
+    vertical-align: middle;
+    color: black;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.ted-member-card a:hover, .ted-recommendations-card a:hover  {
+    color: var(--author-or-name-color);
+}
+.ted-member-card i, .ted-recommendations-card i {
+    margin-left: 5px;
+}
+.ted-member-card p, .ted-recommendations-card p {
+    padding-top: 20px;
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--paragraph-color);
+}
+.footer-footer {
+    background-color: #f6f6f6;
+    padding: 30px 0;
+}
+.copyright p {
+    color: var(--paragraph-color);
+    font-size: 14px;
+}
+@media screen and (max-width: 1263px) {
+     .footer-logo img {
+        width: 10%;
+    }
+    .footer-card-items.ted-member {
+        border-left:  unset;
+        padding-left: 0;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 820px) {
+    .container {
+        width: 90%;
+    }
+    .footer-card-items.ted-member {
+        border-bottom: unset;
+    }
+    .footer-card-items {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        margin-bottom: 10px;
+        padding: 20px 0;
+        margin-right: 0;
+    }
+    .p-l, .p-r {
+        padding: 0;
+    }
+    .copyright, .b-b {
+        border-bottom: unset;
+        padding: 30px 0;
+    }
+    .footer-card.footer-bttom .footer-card-items {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 0px;
+    }
+    .footer-card.footer-bttom .footer-card-items.copyright {
+        display: grid;
+        grid-template-columns: unset;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .footer-logo img {
+        width: 20%;
+    }
+    .footer-card-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer-card-items-content ul {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer-card.footer-bttom .footer-card-items .footer-card-items-content ul {
+        display: grid;
+        grid-template-columns: unset;
+    }
+    .ted-member-card a, .ted-recommendations-card a {
+        font-size: 18px;
+    }
+    .copyright {
+        padding-top: 30px;
+        padding-bottom: 0;
+        margin-top: 30px;
+    }
+}
+/* end footer */
