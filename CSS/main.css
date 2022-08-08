@@ -548,7 +548,7 @@ nav .unOrderList .item.search-item:hover {
     background-color: #000;
     color: #fff;
     display: flex;
-    width: 121px;
+    width: 140px;
     height: 48px;
     border-radius: 4px;
     display: flex;
@@ -834,7 +834,37 @@ nav .unOrderList .item.search-item:hover {
     }
 }
 /* end Explore-playlists */
-
+/* start about */
+.about-content {
+    width: 30%;
+    margin: auto;
+    padding: 20px 0;
+}
+.about-title {
+    text-align: center;
+    font-size: 20px;
+}
+.about-desc {
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 20px 0;
+    color: var(--author-or-name-color);
+}
+@media screen and (max-width: 1263px) {
+    .about-content {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .about-content {
+        width: 100%;
+    }
+    .about-title {
+        text-align: start;
+        font-size: 20px;
+    }
+}
+/* end about */
 /* start footer */
 footer {
     border-top: 3px solid var(--main-red-color);
